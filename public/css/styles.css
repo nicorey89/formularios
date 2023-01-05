@@ -1,0 +1,238 @@
+:root {
+   /* variables de colores */
+   --amarillo: #EAC926;
+   --azul: #03264C;
+   --Celeste: #1259c3;
+   --Gris-oscuro: #666;
+   --Gris-claro: #ebebeb;
+   --Verde: #39b54a;
+   /* fuentes */
+   --fuente: 'Roboto', sans-serif;
+   /* tamaños tipograficos */
+   --parrafos: 12px;
+   --titulos: 24px;
+   --precio: 18px;
+   --descuento: 16px;
+   --descripcion: 16px;
+
+}
+
+ /* 
+Titulares (Basado en tu última visita/Ofertas): 24px
+ */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+  width: 100%
+}
+
+a {
+   color: black;
+   text-decoration: none;
+   display: inline-block;
+   padding: 5px 0;
+   font-size: 17px;
+}
+
+body {
+  background-color: var(--Gris-claro);
+   font-family: var(--fuente);
+}
+
+li {
+   list-style: none;
+}
+div.busqueda {
+  padding: 15px 0;
+  flex-grow: 0.5;
+}
+.main-header {
+  background-color: var(--amarillo);
+  padding: 20px;
+}
+.main-header-top-bar-busqueda{
+display: flex;
+flex-wrap: wrap;
+}
+.main-header-top-bar a{
+  flex-grow: 0.5;
+}
+.logo {
+  width: 150px;
+}
+.copy-header {
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.burger-button {
+  background-color: var(--Celeste);
+  color: var(--Gris-claro);
+  max-width: 50px;
+  padding: 15px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  margin: auto;
+}
+.main-nav-bar {
+  display: none;
+}
+img.banner{
+  width: 100%;
+  
+}
+main {
+  width: 90%;
+  margin: auto;
+}
+section div.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+main section h4 {
+  text-align: center;
+}
+section div.product-container article.product {
+    border: 1px solid var(--Gris-claro);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    max-width: 400px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100); 
+}
+section div.product-container article.product div.description-product {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  padding: 15px 15px 5px 15px;
+}
+div.description-product i{
+  display: block;
+  font-size: 1rem;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--Verde);
+  color: var(--Verde);
+  background-color: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+#precio{
+  font-size: var(--precio);
+  flex-grow: 0.30;
+}
+
+#descuento{
+  color: var(--Verde);
+  flex-grow: 0.7;
+}
+.descripcion{
+  color: var(--Gris-oscuro);
+  font-size: var(--descripcion);
+}
+div.precio{
+  display: flex;
+}
+
+section div.product-container article.product div.product-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 0.5rem;
+
+}
+div.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+footer {
+  background-color: white;
+}
+footer article{
+  text-align: center;
+  padding: 15px 50px;
+  padding-bottom: 15px;
+}
+footer article i{
+  color: var(--Celeste);
+  font-size:  2rem;
+  padding-bottom: 15px;
+}
+footer span {
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .main-header-top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  } 
+  .copy-header{
+    font-size: 1.5rem;
+    max-width: 350px;
+    text-align: right;
+  }
+  .burger-button {
+    display: none;
+  }
+  .main-nav-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav-bar ul {
+    display: flex;
+  }
+  .main-nav-bar li {
+    margin: 0 5px;
+  }
+  section div.product-container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+}
+
+@media (min-width: 1200px){
+  .logo {
+    width: 250px;
+  }
+  .main-header-top-bar, .main-nav-bar{
+    max-width: 1200px;
+    margin: auto;
+  }
+  .main-header-top-bar {
+    align-items: center;
+  }
+  .main-nav-bar {
+    margin-top: 50px;
+  }
+  .main-nav-bar li {
+    margin: 0 10px;
+  }
+  .main-nav-bar a {
+    font-size: 19px;
+  }
+  .copy-header{
+    margin: 0;
+    max-width: none;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+}
