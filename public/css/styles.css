@@ -1,3 +1,7 @@
+@import url('register.css');
+@import url('login.css');
+
+
 :root {
    /* variables de colores */
    --amarillo: #EAC926;
