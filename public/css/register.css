@@ -26,28 +26,44 @@ div.form-container{
 .form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-.input-container, .button-container{
+.input-container{
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
     width: 100%;
+}
+.button-container{
+    display: flex;
+    max-width: 500px;
 
 }
 span.error-message{
+    display: none;
     color: tomato;
     font-size: .7rem;
-    display: none;
 }
+.check-interest {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.check-interest div{
+    padding-bottom: 10px;
+}
+div.form span a{
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+}
+
 input.input-style{
     border: none;
     border-radius: 0.2rem;
     height: 2rem;
     padding: 0 0.5rem;
     outline: none;
-    color: red;
 
 }
 input.input-style::placeholder{
