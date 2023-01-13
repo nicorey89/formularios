@@ -18,12 +18,14 @@
         <div class="main-header-top-bar">
             <div class="main-header-top-bar-busqueda">
                 <a href="/"><img src="/images/logo-mercado-liebre.svg" class="logo" alt="mercado liebre"></a>
-                <div class="busqueda">
-                    <input type="search" placeholder="Buscar productos, marca...">
-                    <button>
-                        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </div> 
+                <form action="/" method="get">
+                    <div class="busqueda">
+                        <input type="search" placeholder="Buscar productos, marca...">
+                        <button>
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form> 
             </div>
             <h2 class="copy-header">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
@@ -48,69 +50,86 @@
         </nav>
     </header>
     <main>
-        <div class="form-container">
+        <div class="form-container register">
             <h2>Registro</h2>
             <hr>
-            <form action="/" method="get">
+            <form action="/" method="post">
                 <div class="form">
-                    <div class="input-container">
-                        <input class="input-style" type="text" name="nombre" placeholder="nombre y apellido">
-                        <span class="error-message">Debe ingresar su nombre y apellido</span>
-                    </div>
-                    <div class="input-container">
-                        <input class="input-style" type="text" name="usuario" placeholder="nombre de usuario">
-                        <span class="error-message">Debe ingresar su nombre de usuario</span>
-                    </div>
-                    <div class="input-container">
-                        <input class="input-style" type="email" name="email" placeholder="email">
-                        <span class="error-message">Debe ingresar su email</span>
-                    </div>
-                    <div class="input-container">
-                        <label for="">fecha de nacimiento</label>
-                        <input class="input-style" type="date" name="fecha" value="2023-01-05">
-                        <span class="error-message">Debe ingresar su fecha de nacimiento</span>
-                    </div>
-                    <div class="input-container">
-                        <input class="input-style" type="text" name="direccion" placeholder="domicilio y numero">
-                        <span class="error-message">Debe ingresar su domicilio</span>
-                    </div>
-                    <div class="button-radio-container">
-                        <h4>Perfil de usuario</h4>
-                        <label for="perfil">Comprador</label>
-                        <input type="radio" name="perfil" id="perfil" value="comprador">
-                        <label for="perfil">Vendedor</label>
-                        <input type="radio" name="perfil" id="perfil" value="vendedor">
-                    </div>
-                    <div class="check-interest">
-                        <h4>Intereses</h4>
-                        <div>
-                            <input type="checkbox" name="interest" id="intereses">
-                            <label for="interest">Electro</label>
+                    <div class="profile-box">
+                        <h4 class="profile-subtitle">Avatar</h4>
+                        <div class="avatar">
+                            <img src="#photo" alt="">
                         </div>
-                        <div> 
-                            <input type="checkbox" name="interest" id="intereses"> 
-                            <label for="interest">Moda</label>   
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interest" id="intereses"> 
-                            <label for="interest">Hogar</label>   
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interest" id="intereses"> 
-                            <label for="interest">Juguetería</label> 
-                        </div>
-                        <div>
-                            <input type="checkbox" name="interest" id="intereses"> 
-                            <label for="interest">Vida sana</label>
+                        <div class="input-file-container">
+                            <input type="file" name="" id="photo">
                         </div>
                     </div>
-                    <div class="input-container">
-                        <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
-                        <span class="error-message">Debe ingresar su contraseña</span>
-                    </div>
-                    <div class="input-container">
-                        <input class="input-style" type="password" name="pass2" placeholder="Re-ingrese su contraseña">
-                        <span class="error-message">Debe re-ingresar su contraseña</span>
+                    <div class="profile-form">
+                        <div class="profile-box">
+                            <div class="input-container">
+                                <input class="input-style" type="text" name="nombre" placeholder="nombre y apellido">
+                                <span class="error-message">Debe ingresar su nombre y apellido</span>
+                            </div>
+                            <div class="input-container">
+                                <input class="input-style" type="text" name="usuario" placeholder="nombre de usuario">
+                                <span class="error-message">Debe ingresar su nombre de usuario</span>
+                            </div>
+                            <div class="input-container">
+                                <input class="input-style" type="email" name="email" placeholder="email">
+                                <span class="error-message">Debe ingresar su email</span>
+                            </div>
+                            <div class="input-container">
+                                <input class="input-style" type="text" name="direccion" placeholder="domicilio y numero">
+                                <span class="error-message">Debe ingresar su domicilio</span>
+                            </div>
+                            <div class="button-radio-container">
+                                <h4>Perfil de usuario</h4>
+                                <label for="perfil">Comprador</label>
+                                <input type="radio" name="perfil" id="perfil" value="comprador">
+                                <label for="perfil">Vendedor</label>
+                                <input type="radio" name="perfil" id="perfil" value="vendedor">
+                            </div>
+                        </div>
+                        <div class="profile-box">
+                            <div class="input-container">
+                                <input class="input-style" type="password" name="pass" placeholder="Ingrese su contraseña">
+                                <span class="error-message">Debe ingresar su contraseña</span>
+                            </div>
+                            <div class="input-container">
+                                <input class="input-style" type="password" name="pass2" placeholder="Re-ingrese su contraseña">
+                                <span class="error-message">Debe re-ingresar su contraseña</span>
+                            </div>
+                            <div class="input-container-fecha">
+                                <label for="">fecha de nacimiento</label>
+                                <input class="input-style fecha" type="date" name="fecha" value="2023-01-05">
+                                <span class="error-message">Debe ingresar su fecha de nacimiento</span>
+                            </div>
+                            <div class="interest-container">
+                                <h4>Intereses</h4>
+                                <div class="check-interest">
+                                    <div>
+                                        <input type="checkbox" name="interest" id="intereses">
+                                        <label for="interest">Electro</label>
+                                    </div>
+                                    <div> 
+                                        <input type="checkbox" name="interest" id="intereses"> 
+                                        <label for="interest">Moda</label>   
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="interest" id="intereses"> 
+                                        <label for="interest">Hogar</label>   
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="interest" id="intereses"> 
+                                        <label for="interest">Juguetería</label> 
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" name="interest" id="intereses"> 
+                                        <label for="interest">Vida sana</label>
+                                    </div>
+                                </div>   
+                            </div>
+                        </div>
                     </div>
                     <div class="check">
                         <input type="checkbox" name="terms" id="recordar"> 
@@ -123,7 +142,6 @@
                         <span class="error-message">Credenciales inválidas</span>
                         <button type="submit" class="btn-submit">Registrarme</button>
                     </div> 
-
                     <span><a href="/login">Ya tengo cuenta</a></span>
                 </div>
             </form>
